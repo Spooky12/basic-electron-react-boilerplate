@@ -1,0 +1,46 @@
+{
+  "name": "basic-electron-react-boilerplate",
+  "version": "0.1.0",
+  "private": true,
+  "author": "Thomas T. (https://github.com/Spooky12/)",
+  "repository": "https://github.com/Spooky12/basic-electron-react-boilerplate",
+  "main": "public/main.js",
+  "homepage": "./",
+  "dependencies": {
+    "electron-is-dev": "^0.3.0",
+    "react": "^16.4.2",
+    "react-dom": "^16.4.2",
+    "react-scripts": "1.1.4"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "electron-start": "electron .",
+    "electron-dev": "concurrently \"set BROWSER=none&&npm start\" \"wait-on http://localhost:3000 && electron .\"",
+    "preelectron-pack": "npm run build",
+    "electron-pack": "build -c.extraMetadata.main=build/main.js",
+    "electron-dist": "build -c.extraMetadata.main=build/main.js --dir"
+  },
+  "devDependencies": {
+    "concurrently": "^3.6.1",
+    "electron": "^2.0.7",
+    "electron-builder": "^20.27.1",
+    "wait-on": "^2.1.0"
+  },
+  "build": {
+    "appId": "com.rlp",
+    "files": [
+      "build/**/*",
+      "node_modules/**/*"
+    ],
+    "directories": {
+      "buildResources": "assets"
+    },
+    "extraResources": [{
+      "from": "public/appResources",
+      "to": "appResources"
+    }]
+  }
+}
