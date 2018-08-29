@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Electron React Boilerplate",
+  "name": "Basic Electron React Boilerplate",
   "icons": [
     {
       "src": "favicon.ico",

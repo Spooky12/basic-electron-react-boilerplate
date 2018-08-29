@@ -1,5 +1,6 @@
 {
   "name": "basic-electron-react-boilerplate",
+  "description": "A basic Electron-React boilerplate",
   "version": "0.1.0",
   "private": true,
   "author": "Thomas T. (https://github.com/Spooky12/)",
@@ -25,7 +26,7 @@
   },
   "devDependencies": {
     "concurrently": "^3.6.1",
-    "electron": "^2.0.7",
+    "electron": "^2.0.8",
     "electron-builder": "^20.27.1",
     "wait-on": "^2.1.0"
   },
@@ -38,9 +39,11 @@
     "directories": {
       "buildResources": "assets"
     },
-    "extraResources": [{
-      "from": "public/appResources",
-      "to": "appResources"
-    }]
+    "extraResources": [
+      {
+        "from": "extraResources",
+        "to": "extraResources"
+      }
+    ]
   }
 }
