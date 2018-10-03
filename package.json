@@ -11,7 +11,7 @@
     "electron-is-dev": "^0.3.0",
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
-    "react-scripts": "1.1.4"
+    "react-scripts": "2.0.3"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -45,5 +45,11 @@
         "to": "extraResources"
       }
     ]
-  }
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
 }
