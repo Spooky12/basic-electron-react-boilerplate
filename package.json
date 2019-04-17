@@ -5,14 +5,14 @@
   "private": true,
   "author": "Thomas T. (https://github.com/Spooky12/)",
   "repository": "https://github.com/Spooky12/basic-electron-react-boilerplate",
-  "main": "public/main.js",
+  "main": "public/electron.js",
   "homepage": "./",
   "dependencies": {
-    "electron-is-dev": "^0.3.0",
-    "node-sass": "^4.9.3",
-    "react": "^16.4.2",
-    "react-dom": "^16.4.2",
-    "react-scripts": "2.0.3"
+    "electron-is-dev": "^1.1.0",
+    "node-sass": "^4.11.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-scripts": "^2.1.8"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -22,14 +22,15 @@
     "electron-start": "electron .",
     "electron-dev": "concurrently \"set BROWSER=none&&npm start\" \"wait-on http://localhost:3000 && electron .\"",
     "preelectron-pack": "npm run build",
-    "electron-pack": "build -c.extraMetadata.main=build/main.js",
-    "electron-dist": "build -c.extraMetadata.main=build/main.js --dir"
+    "electron-pack": "build",
+    "electron-dist": "build --dir"
   },
   "devDependencies": {
-    "concurrently": "^3.6.1",
-    "electron": "^2.0.8",
-    "electron-builder": "^20.27.1",
-    "wait-on": "^2.1.0"
+    "concurrently": "^4.1.0",
+    "electron": "^4.1.4",
+    "electron-builder": "^20.40.2",
+    "typescript": "^3.4.3",
+    "wait-on": "^3.2.0"
   },
   "build": {
     "appId": "com.rlp",
